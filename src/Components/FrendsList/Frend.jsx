@@ -1,10 +1,11 @@
 import PropTypes from "prop-types";
 import imgDefault from "./img_default.jpg";
 
-function FrendList({
+function Frend({
   imgProfile = imgDefault,
   name = "не известно",
   isOnline,
+  id,
 }) {
   return (
     <li>
@@ -17,11 +18,11 @@ function FrendList({
   );
 }
 
-//   FrendList.PropTypes = {
-//     imgProfile: PropTypes.string,
-//     isOnline: PropTypes.bool,
-//     name: PropTypes.string,
+Frend.propTypes = {
+  imgProfile: PropTypes.string,
+  isOnline: PropTypes.bool,
+  name: PropTypes.string,
+  id: PropTypes.number,
+};
 
-//   };
-
-export default FrendList;
+export default Frend;
