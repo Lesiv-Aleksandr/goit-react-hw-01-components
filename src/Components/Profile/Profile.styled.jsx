@@ -4,8 +4,6 @@ const ProfileAllStyled = styled.div`
   width: 320px;
   margin: 10px auto;
   background-color: #7f7f7f;
-  border-radius: 4px;
-  box-shadow: 2px 2px 2px 1px #cdd7e4;
 `;
 
 const ProfileDescription = styled.div`
@@ -19,12 +17,11 @@ const ProfileAvatar = styled.img`
   height: auto;
   margin: 0 auto 20px;
   border-radius: 50%;
-  border: outset 6px rgba(86, 181, 184, 0.2);
 `;
 
 const ProfileName = styled.p`
   margin-bottom: 12px;
-  font-size: 1.6rem;
+  font-size: 20px;
   font-weight: 700;
   color: #000000;
 `;
