@@ -1,58 +1,24 @@
-import styled from "@emotion/styled";
+import styled from "styled-components";
 
-const StatisticsSection = styled.section`
-  margin: 0 auto 10px;
-  padding-top: 10px;
-  text-align: center;
-  max-width: 320px;
-  border: 1px solid ${({ theme }) => theme.colors.mainColor};
-  border-radius: 12px;
-  background-color: ${({ theme }) => theme.colors.backgroundColorDark};
-  box-shadow: 5px 5px 20px 2px rgb(0 0 0/ 0.5);
+const StatisticsStyled = styled.section`
+  width: 320px;
+  margin: 10px auto;
 `;
 
 const StatisticsTitle = styled.h2`
-  padding-bottom: 10px;
+  text-align: center;
+  padding: 20px;
   text-transform: uppercase;
-  color: ${({ theme }) => theme.colors.mainColor};
-  font-size: 1.8rem;
+  font-size: 20px;
   font-weight: 500;
-  border-bottom: 1px solid ${({ theme }) => theme.colors.mainColor};
+  background: #7f7f7f;
+  color: #00000;
 `;
 
-const StatisticStatsList = styled.ul`
+const StatisticsList = styled.ul`
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 6px 30px 10px;
+  padding: 0;
+  margin: 0;
 `;
 
-const StatisticStatsListItem = styled.li`
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  font-size: 1.5rem;
-  color: ${({ theme }) => theme.colors.mainColor};
-  font-weight: 400;
-  :not(:last-child) {
-    border-bottom: 1px dashed ${({ theme }) => theme.colors.mainColor};
-    padding-bottom: 6px;
-  }
-  :not(:first-of-type) {
-    padding-top: 6px;
-  }
-`;
-
-const StatPercentage = styled.span`
-  color: ${({ theme }) => theme.colors.mainColor};
-  font-weight: 500;
-`;
-
-export {
-  StatisticsSection,
-  StatisticsTitle,
-  StatisticStatsList,
-  StatisticStatsListItem,
-  StatPercentage,
-};
+export { StatisticsStyled, StatisticsTitle, StatisticsList };

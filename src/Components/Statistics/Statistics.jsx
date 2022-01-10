@@ -1,32 +1,21 @@
 import PropTypes from "prop-types";
-import StatisticsItem from "./StatisticsItem";
+import StatsItem from "./StatsItem";
 import {
-  StatisticsSection,
+  StatisticsStyled,
   StatisticsTitle,
-  StatisticStatsList,
+  StatisticsList,
 } from "./Statistics.styled";
 
-function Statistics({ title, stats }) {
+export default function Statistics({ title, stats }) {
   return (
-    <StatisticsSection>
-      {title && <StatisticsTitle>{title}</StatisticsTitle>}
-
-      <StatisticStatsList>
-        {stats.map((stat) => (
-          <StatisticsItem key={stat.id} stat={stat} />
-        ))}
-      </StatisticStatsList>
-    </StatisticsSection>
+    <StatisticsStyled>
+      <StatisticsTitle>{title}</StatisticsTitle>
+      <StatisticsList>{stats.map(StatsItem)}</StatisticsList>
+    </StatisticsStyled>
   );
 }
 
 Statistics.propTypes = {
   title: PropTypes.string,
-  stats: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-    })
-  ),
+  stats: PropTypes.array,
 };
-
-export default Statistics;

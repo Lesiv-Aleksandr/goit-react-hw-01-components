@@ -1,13 +1,21 @@
-import FrendsList from "./Components/FrendsList/FrendsList";
-import frends from "./data/friend-list.json";
+import "./App.css";
+import Profile from "./components/Profile/Profile";
+import Statistics from "./components/Statistics/Statistics";
+import FriendList from "./components/Friends/FriendList";
+import TransactionHistory from "./components/Transactions/TransactionHistory";
 
-import StatisticsData from "./data/statisticsData.json";
-import Statistics from "./Components/Statistics/Statistics";
+import user from "./components/data/user.json";
+import data from "./components/data/data.json";
+import friends from "./components/data/friends.json";
+import items from "./components/data/transactions.json";
+
 function App() {
   return (
-    <div>
-      <FrendsList items={frends} />
-      <Statistics title="Upload stats" stats={StatisticsData} />
+    <div className="App">
+      <FriendList friends={friends} />
+      <Statistics title="Upload stats" stats={data} />
+      <Profile user={user} />
+      <TransactionHistory items={items} />
     </div>
   );
 }
